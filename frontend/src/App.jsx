@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Layout } from './components/layout';
 import { Home, Resume, Projects, Publications } from './components/pages';
 import './App.css';
@@ -22,9 +23,12 @@ function App() {
   };
 
   return (
-    <Layout activeSection={activeSection} setActiveSection={setActiveSection}>
-      {renderPage()}
-    </Layout>
+    <>
+      <Layout activeSection={activeSection} setActiveSection={setActiveSection}>
+        {renderPage()}
+      </Layout>
+      <Analytics />
+    </>
   );
 }
 

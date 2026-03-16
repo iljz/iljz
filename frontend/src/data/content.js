@@ -63,23 +63,29 @@ export const projects = [
 
 export const publications = [
   {
-    title: "Advanced Machine Learning Techniques for Data Analysis",
-    venue: "Journal of Computer Science",
-    year: "2024",
+    title: "IN PROGRESS...",
+    venue: "",
+    year: "2026",
     link: "#"
   },
-  {
-    title: "Neural Networks in Modern Computing Applications",
-    venue: "IEEE Transactions on Neural Networks",
-    year: "2023",
-    link: "#"
-  },
-  {
-    title: "Computational Methods for Complex Systems",
-    venue: "Nature Computing",
-    year: "2023",
-    link: "#"
-  }
+  // {
+  //   title: "Advanced Machine Learning Techniques for Data Analysis",
+  //   venue: "Journal of Computer Science",
+  //   year: "2024",
+  //   link: "#"
+  // },
+  // {
+  //   title: "Neural Networks in Modern Computing Applications",
+  //   venue: "IEEE Transactions on Neural Networks",
+  //   year: "2023",
+  //   link: "#"
+  // },
+  // {
+  //   title: "Computational Methods for Complex Systems",
+  //   venue: "Nature Computing",
+  //   year: "2023",
+  //   link: "#"
+  // }
 ];
 
 export const experience = [
