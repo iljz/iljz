@@ -11,7 +11,6 @@ const INITIAL_MESSAGE = {
 };
 
 const DEFAULT_CHAT_API_URL = 'http://127.0.0.1:5001/chat'; // dev default
-const chatApiUrl = import.meta.env.VITE_CHAT_API_URL || DEFAULT_CHAT_API_URL;
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 

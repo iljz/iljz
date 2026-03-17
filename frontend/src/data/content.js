@@ -34,30 +34,30 @@ export const projects = [
   {
     title: "PICO Scholar - AI Lit Reviews",
     description: "Built an accelerated biomedical literature review platform utilizing RAG and fine-tuned models (2nd Place at Red Hat & Intel AI Hackathon). Developed a system with LlamaIndex and FastAPI to generate multi-document summaries and context-aware chatbots for 120+ research papers, using MongoDB for chat persistence.",
-    tech: ["Python", "LlamaIndex", "FastAPI", "MongoDB"],
+    tech: ["Python", "Hugging Face", "FastAPI", "MongoDB"],
     link: "https://github.com/datagero/pico-scholar",
     year: "2025"
   },
   {
     title: "Constrained LLM Post-Training Optimization",
     description: "Optimized SFT and RL post-training for Qwen3-4B under a strict 1-GPU/24-hour budget. Utilized 4-bit quantization and LoRA to reduce memory footprint by 15%. Conducted hyperparameter ablation studies across GRPO loss variants, identifying a 1e-05 learning rate regime that swung reasoning accuracy by 14.6% to achieve a Pass@1 score of 0.8901 on the GSM8K benchmark.",
-    tech: ["Python", "Qwen3", "LoRA", "GRPO"],
+    tech: ["Python", "PyTorch", "Hugging Face"],
     link: "#",
     year: "2025"
   },
   {
     title: "Fading the Crowd: Prediction Market Visualizer",
     description: "Developed an interactive data visualization platform analyzing macroeconomic prediction markets. Engineered dynamic charts for Implied vs. Realized Probability, a microstructure heatmap, and a strategy simulator to backtest and exploit favorite-longshot biases across massive trading datasets.",
-    tech: ["Data Visualization", "Python", "React"],
+    tech: ["Python", "React", "JavaScript/TypeScript"],
     link: "#",
-    year: "2024"
+    year: "2026"
   },
   {
     title: "SEC 10-K Filings AI Assistant",
     description: "Engineered an AI agent designed to navigate, analyze, and retrieve targeted information from complex corporate SEC 10-K filings. Developed a reasoning layer to intelligently categorize user queries across the 15 standard 10-K items, streamlining the financial document review process.",
-    tech: ["Python", "LLMs", "Prompt Engineering"],
+    tech: ["Python", "LangChain"],
     link: "#",
-    year: "2024"
+    year: "2025"
   }
 ];
 
@@ -67,25 +67,7 @@ export const publications = [
     venue: "",
     year: "2026",
     link: "#"
-  },
-  // {
-  //   title: "Advanced Machine Learning Techniques for Data Analysis",
-  //   venue: "Journal of Computer Science",
-  //   year: "2024",
-  //   link: "#"
-  // },
-  // {
-  //   title: "Neural Networks in Modern Computing Applications",
-  //   venue: "IEEE Transactions on Neural Networks",
-  //   year: "2023",
-  //   link: "#"
-  // },
-  // {
-  //   title: "Computational Methods for Complex Systems",
-  //   venue: "Nature Computing",
-  //   year: "2023",
-  //   link: "#"
-  // }
+  }
 ];
 
 export const experience = [
@@ -93,7 +75,7 @@ export const experience = [
     role: "Graduate Research Assistant",
     organization: "Georgia Institute of Technology",
     location: "Atlanta, GA",
-    period: "2024 — Present",
+    period: "Jan 2025 — Present",
     bullets: [
       "Designed, built, and deployed an AI Virtual TA to 800+ students across 3 universities, using a multi-modal chat agent to process course documents and deliver grounded, GPT-4-powered answers for online learning",
       "Increased retrieval relevance and answer confidence for 77% of users by implementing a multi-representation strategy in Python, querying across textual and visual data collections on a vector database",
@@ -105,7 +87,7 @@ export const experience = [
     role: "Software Engineering Intern",
     organization: "Stryker",
     location: "San Jose, CA",
-    period: "Summer 2025",
+    period: "May 2025 - Aug 2025",
     bullets: [
       "Engineered a Java Spring Boot microservice that entirely eliminated ~30s of downtime and failovers that interrupt processes during firmware upgrades, resolving a critical reliability issue for hospital communication devices",
       "Re-architected legacy updater process by extracting it from a monolithic codebase into an independent service, decoupling server dependencies and reducing code complexity by 40%",
@@ -114,16 +96,15 @@ export const experience = [
     ]
   },
   {
-    role: "Undergraduate Research Assistant",
-    organization: "University of Illinois at Urbana-Champaign",
-    location: "Champaign, IL",
-    period: "2022 — 2024",
+    role: "Full Stack Software Engineer",
+    organization: "Aerospace Systems Design Lab - Energy Infrastructure and Data Engineering",
+    location: "Remote",
+    period: "Oct 2024 - May 2025",
     bullets: [
-      "Conducted research on computational fluid dynamics and machine learning integration",
-      "Published findings in peer-reviewed journals",
-      "Mentored junior students in research methodologies"
+      "Developed a Vue.js/Flask dashboard to visualize real-time data from 20+ IoT sensors, enabling researchers togather insights into energy expenditures at different locations", 
+      "Architected a secure sensor authentication service and Postgres data pipeline, reducing IoT data retrieval and analysis time from hours to minutes"
     ]
-  }
+  },
 ];
 
 export const education = [
@@ -156,10 +137,37 @@ export const education = [
 ];
 
 export const skills = {
-  "Languages": ["Python", "JavaScript/TypeScript", "C++", "Java", "SQL", "R", "MATLAB"],
-  "ML/AI": ["PyTorch", "TensorFlow", "scikit-learn", "Hugging Face", "LangChain"],
-  "Web & Backend": ["React", "Node.js", "FastAPI", "PostgreSQL", "MongoDB"],
-  "Tools & Infrastructure": ["Git", "Docker", "Kubernetes", "AWS", "Linux", "LaTeX"]
+  "Languages": [
+    { name: "Python",                 proficiency: 5, years: 3, note: "Primary language for all ML, research, and backend work." },
+    { name: "JavaScript/TypeScript",  proficiency: 3, years: 2, note: "Frontend UIs and full-stack services; TypeScript for LTI app at GT." },
+    { name: "Java",                   proficiency: 3, years: 2, note: "Spring Boot microservices during Stryker internship." },
+    { name: "C++",                    proficiency: 2, years: 2, note: "Systems programming and computational simulations." },
+    { name: "SQL",                    proficiency: 2, years: 2, note: "Relational data modeling and query optimization." },
+    { name: "R",                      proficiency: 1, years: 2, note: "Statistical analysis and data exploration." },
+    { name: "MATLAB",                 proficiency: 1, years: 3, note: "Numerical computing and simulation during undergrad research." },
+  ],
+  "ML/AI": [
+    { name: "PyTorch",       proficiency: 4, years: 3, note: "Deep learning training, RL experiments, and fine-tuning workflows." },
+    { name: "Hugging Face",  proficiency: 4, years: 2, note: "Pre-trained model access, LoRA/SFT fine-tuning, and model evaluation." },
+    { name: "scikit-learn",  proficiency: 4, years: 4, note: "Classical ML pipelines, feature engineering, and evaluation." },
+    { name: "LangChain",     proficiency: 3, years: 1, note: "LLM orchestration chains and retrieval-augmented pipelines." },
+    { name: "TensorFlow",    proficiency: 3, years: 2, note: "Model deployment and inference pipelines." },
+  ],
+  "Web & Backend": [
+    { name: "React",       proficiency: 4, years: 3, note: "Admin dashboards, LTI-compliant course tools, and this portfolio." },
+    { name: "FastAPI",     proficiency: 4, years: 2, note: "High-performance Python REST APIs for AI-backed services." },
+    { name: "Node.js",     proficiency: 3, years: 3, note: "Server-side JS for APIs and build tooling." },
+    { name: "PostgreSQL",  proficiency: 3, years: 3, note: "Relational database design for structured application data." },
+    { name: "MongoDB",     proficiency: 3, years: 1, note: "Document storage for AI chat and session persistence." },
+  ],
+  "Tools & Infrastructure": [
+    { name: "AWS",         proficiency: 4, years: 2, note: "EC2 and S3 for containerized production deployments at GT." },
+    { name: "Docker",      proficiency: 4, years: 3, note: "Containerized microservices across research and internship projects." },
+    { name: "Git",         proficiency: 5, years: 5, note: "Version control across every project and team collaboration." },
+    { name: "Linux",       proficiency: 4, years: 4, note: "Primary development and server environment for all work." },
+    { name: "Kubernetes",  proficiency: 2, years: 1, note: "Container orchestration — actively building familiarity." },
+    { name: "LaTeX",       proficiency: 3, years: 3, note: "Academic writing, research papers, and formatted reports." },
+  ],
 };
 
 export const navItems = ['Home', 'Resume', 'Projects', 'Publications'];
